@@ -1,48 +1,63 @@
-html, body {
+$document-font: 'Raleway', sans-serif;
+
+html, body{
   padding: 0;
   margin: 0;
-  font-family: "Raleway", sans-serif; }
+  font-family: $document-font;
+}
 
 /* SECTION */
-#container {
+
+#container{
   height: 100vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-image: radial-gradient(#627696 0%, #222C3A 85%); }
-  #container > div {
+  background-image: radial-gradient(#627696 0%, #222C3A 85%);
+
+  >div{
     margin-top: 35vh;
-    background: rgba(30, 30, 30, 0.3);
+    background: rgba(30, 30, 30,0.3);
     border-radius: 10px;
     padding: 15px;
-    height: fit-content; }
-    #container > div > p {
+    height: fit-content;
+
+    >p{
       color: #FFF;
       font-size: 30px;
       text-align: center;
-      margin-top: 10px; }
-    #container > div > div {
+      margin-top: 10px;
+    }
+
+    >div{
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       width: 294px;
-      margin-bottom: 10px; }
-      #container > div > div > input {
+      margin-bottom: 10px;
+
+      >input{
         width: 250px;
         height: 30px;
         padding: 3px 5px;
         font-family: 'Raleway', sans-serif;
         border: none;
-        font-size: 14px; }
-      #container > div > div > input:focus {
-        outline: none; }
-      #container > div > div > button {
+        font-size: 14px;
+      }
+
+      >input:focus{
+        outline: none;
+      }
+
+      >button{
         background: #FFF;
         border: none;
         opacity: .4;
         margin: 0;
-        Width: 30px; }
-      #container > div > div > a {
+        Width: 30px;
+      }
+
+      >a{
         width: 290px;
         text-align: center;
         background: #FFF;
@@ -50,15 +65,22 @@ html, body {
         border-top: 1px solid #DDD;
         transition: background-color .4s;
         cursor: pointer;
-        color: #555555; }
-      #container > div > div > a:hover {
-        background: #CCC; }
+        color: #555555;
+      }
 
-.hide {
-  display: none; }
+      >a:hover{
+        background: #CCC;
+      }
+    }
+  }
+}
 
-.show {
+
+.hide{
+  display: none;
+}
+
+.show{
   display: block;
-  visibility: visible; }
-
-/*# sourceMappingURL=main.css.map */
+  visibility: visible;
+}
