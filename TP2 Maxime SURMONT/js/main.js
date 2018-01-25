@@ -8,10 +8,9 @@ function filterInput(){
 
         var score = 0;
 
-        for(let i = 0; i < allPossibility.length; i++){
+        for(let i = 1; i < allPossibility.length; i++){
             if(allPossibility[i].innerHTML.toLowerCase().indexOf(texte.toLowerCase()) > -1){
                 allPossibility[i].className = 'show';
-
                 score++;
             }else{
                 allPossibility[i].className = 'hide';
