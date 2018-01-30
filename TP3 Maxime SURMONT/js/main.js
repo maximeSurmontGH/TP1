@@ -18,7 +18,7 @@ function createNotification(type){
         icon.innerHTML = '&times;';
         icon.className = 'removeIcon';
         icon.onclick = function(){
-            notifications.splice(notifications.indexOf(this), 1);
+            notifications.splice(notifications.indexOf(this.parentNode), 1);
             printNotifications();
         };
 
