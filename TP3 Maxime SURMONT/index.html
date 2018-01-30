@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Drop down Selector</title>
+    <meta name="description" content="TOAST ME">
+    <meta name="viewport"    content="width=device-width">
+
+    <link href="css/main.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <script type="module" src="js/main.js"></script>
+</head>
+<body>
+    <aside id="notification">
+    </aside>
+
+    <section id="container">
+        <div>
+            <p><strong>TOAST ME !</strong></p>
+            <div>
+                <input type="text" placeholder="Your title" id="title">
+                <textarea placeholder="Your message" id="message"></textarea>
+                <button type="error" onclick="createNotification('Alert')" class="btn-error">Error</button>
+                <button type="info" onclick="createNotification('Info')" class="btn-error">Info</button>
+                <button type="success" onclick="createNotification('Success')" class="btn-error">Success</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
