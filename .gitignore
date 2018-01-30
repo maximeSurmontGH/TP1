@@ -11,3 +11,5 @@
 *.ipr
 *.iml
 *.iws
+
+*/modules.xml
