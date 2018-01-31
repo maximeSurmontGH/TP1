@@ -1,8 +1,8 @@
-//import * from './js/notification.js';
+//import {} from './js/notification.js';
 
 const notifications = [];
 
-function createNotification(type){
+createNotification = (type) =>  {
     if(document.getElementById('title').value == '' || document.getElementById('message').value == ''){
         alert("Your notification need a title AND a message to be pushed.");
     }else{
@@ -17,7 +17,7 @@ function createNotification(type){
         let icon = document.createElement('span');
         icon.innerHTML = '&times;';
         icon.className = 'removeIcon';
-        icon.onclick = function(){
+        icon.onclick = () => {
             notifications.splice(notifications.indexOf(this.parentNode), 1);
             printNotifications();
         };
@@ -33,17 +33,22 @@ function createNotification(type){
         notifications.push(notification);
 
         printNotifications();
+
+        window.setInterval(() => {
+            notifications.splice(notifications.indexOf(notification), 1);
+            printNotifications();
+        }, 8000);
     }
 }
 
-function printNotifications(){
+printNotifications => (){
     let aside = document.getElementById('notification');
 
     while(aside.hasChildNodes()){
         aside.removeChild(aside.firstChild);
     }
 
-    for (let notif of notifications){
+    for(let notif of notifications){
         aside.appendChild(notif);
     }
 }
