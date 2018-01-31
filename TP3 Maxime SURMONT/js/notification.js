@@ -11,14 +11,9 @@ export function createNotification(type){
         title.innerHTML = document.getElementById('title').value.toUpperCase();
         document.getElementById('title').value = '';
 
-
         let icon = document.createElement('span');
         icon.innerHTML = '&times;';
         icon.className = 'removeIcon';
-        icon.onclick = () => {
-            notifications.splice(notifications.indexOf(this.parentNode), 1);
-            printNotifications();
-        };
 
         let message = document.createElement('span');
         message.innerHTML = document.getElementById('message').value.toLowerCase();
@@ -28,14 +23,18 @@ export function createNotification(type){
         notification.appendChild(icon);
         notification.appendChild(message);
 
+        notification.childNodes[1].onclick = () => {
+            removeNotification(notification);
+        };
+
         notifications.push(notification);
 
         printNotifications();
 
-        window.setInterval(() => {
+        window.setTimeout(() => {
             notifications.splice(notifications.indexOf(notification), 1);
             printNotifications();
-        }, 8000);
+        }, 100000);
     }
 }
 
@@ -49,4 +48,9 @@ function printNotifications(){
     for(let notif of notifications){
         aside.appendChild(notif);
     }
+}
+
+var removeNotification = (notif) => {
+    notifications.splice(notifications.indexOf(notif), 1);
+    printNotifications();
 }

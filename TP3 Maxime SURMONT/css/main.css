@@ -93,23 +93,23 @@ aside {
         cursor: pointer;
         border: 1px solid transparent;
         border-radius: 4px; }
-      #container > div > div > button[type='error'] {
+      #container > div > div > .btn-error {
         color: #fff;
         background-color: #d9534f;
         border-color: #d43f3a; }
-      #container > div > div > button[type='error']:hover {
+      #container > div > div > .btn-error:hover {
         background-color: #d43f3a; }
-      #container > div > div > button[type='info'] {
+      #container > div > div > .btn-info {
         color: #fff;
         background-color: #337ab7;
         border-color: #2e6da4; }
-      #container > div > div > button[type='info']:hover {
+      #container > div > div > .btn-info:hover {
         background-color: #2e6da4; }
-      #container > div > div > button[type='success'] {
+      #container > div > div > .btn-success {
         color: #fff;
         background-color: #5cb85c;
         border-color: #4cae4c; }
-      #container > div > div > button[type='success']:hover {
+      #container > div > div > .btn-success:hover {
         background-color: #4cae4c; }
 
 /*# sourceMappingURL=main.css.map */
