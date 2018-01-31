@@ -1,6 +1,6 @@
 const notifications = [];
 
-createNotification = (type) =>  {
+export function createNotification(type){
     if(document.getElementById('title').value == '' || document.getElementById('message').value == ''){
         alert("Your notification need a title AND a message to be pushed.");
     }else{
@@ -34,12 +34,12 @@ createNotification = (type) =>  {
 
         window.setInterval(() => {
             notifications.splice(notifications.indexOf(notification), 1);
-        printNotifications();
-    }, 8000);
+            printNotifications();
+        }, 8000);
     }
 }
 
-printNotifications => (){
+function printNotifications(){
     let aside = document.getElementById('notification');
 
     while(aside.hasChildNodes()){
