@@ -1,11 +1,10 @@
 const notifications = [];
 
-export function createNotification(type){
+export function createNotification(){
     if(document.getElementById('title').value == '' || document.getElementById('message').value == ''){
         alert("Your notification need a title AND a message to be pushed.");
     }else{
         let notification = document.createElement('div');
-        notification.setAttribute('type', type);
 
         let title = document.createElement('span');
         title.innerHTML = document.getElementById('title').value.toUpperCase();
@@ -13,7 +12,11 @@ export function createNotification(type){
 
         let icon = document.createElement('span');
         icon.innerHTML = '&times;';
-        icon.className = 'removeIcon';
+        icon.className = 'deleteIcon';
+
+        let icon2 = document.createElement('span');
+        icon2.innerHTML = '&#9998';
+        icon2.className = 'putIcon';
 
         let message = document.createElement('span');
         message.innerHTML = document.getElementById('message').value.toLowerCase();
@@ -21,6 +24,7 @@ export function createNotification(type){
 
         notification.appendChild(title);
         notification.appendChild(icon);
+        notification.appendChild(icon2);
         notification.appendChild(message);
 
         notification.childNodes[1].onclick = () => {
@@ -30,11 +34,6 @@ export function createNotification(type){
         notifications.push(notification);
 
         printNotifications();
-
-        window.setTimeout(() => {
-            notifications.splice(notifications.indexOf(notification), 1);
-            printNotifications();
-        }, 4000);
     }
 }
 

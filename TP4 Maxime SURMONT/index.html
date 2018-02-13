@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>TODO LIST</title>
+    <meta name="description" content="TODO LIST">
+    <meta name="viewport"    content="width=device-width">
+
+    <link href="css/main.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <script type="module" src="js/main.js"></script>
+</head>
+<body>
+    <aside id="notification">
+    </aside>
+
+    <section id="container">
+        <div>
+            <p><strong>TO DO LIST!</strong></p>
+            <div>
+                <input type="text" placeholder="Your title" id="title">
+                <textarea placeholder="Your message" id="message"></textarea>
+                <button type="button" onclick="createNotification()" class="btn-info">ADD IT</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

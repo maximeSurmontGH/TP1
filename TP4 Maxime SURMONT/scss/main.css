@@ -1,0 +1,102 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway", sans-serif; }
+
+/* ASIDE */
+aside {
+  height: fit-content;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 180px;
+  z-index: 999; }
+  aside > div {
+    margin: 10px;
+    padding: 5px;
+    font-size: 12px;
+    border: 1px solid #2e6da4;
+    border-radius: 4px;
+    position: relative;
+    color: #FFF;
+    background-color: #337ab7; }
+    aside > div > span {
+      display: block;
+      word-break: break-all; }
+    aside > div .deleteIcon {
+      font-size: 30px;
+      position: absolute;
+      top: 10px;
+      right: 5px;
+      line-height: 0;
+      cursor: pointer; }
+    aside > div .putIcon {
+      font-size: 17px;
+      position: absolute;
+      top: 30px;
+      right: 4px;
+      line-height: 0;
+      cursor: pointer; }
+
+/* SECTION */
+#container {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-image: radial-gradient(#FFFFFF 0%, #FEFEFF 85%); }
+  #container > div {
+    margin-top: 30vh;
+    background: rgba(10, 10, 30, 0.15);
+    border-radius: 10px;
+    padding: 15px;
+    height: fit-content; }
+    #container > div > p {
+      color: #FFF;
+      font-size: 30px;
+      text-align: center;
+      margin: 10px 0; }
+    #container > div > div {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 294px;
+      margin-bottom: 10px; }
+      #container > div > div > input {
+        width: 350px;
+        height: 30px;
+        padding: 3px 5px;
+        border: none;
+        font-size: 14px;
+        margin-bottom: 15px;
+        font-family: "Raleway", sans-serif;
+        border-radius: 4px; }
+      #container > div > div > input:focus {
+        outline: none; }
+      #container > div > div > textarea {
+        width: 350px;
+        padding: 3px 5px;
+        border: none;
+        font-size: 14px;
+        resize: vertical;
+        height: 100px;
+        margin-bottom: 15px;
+        font-family: "Raleway", sans-serif;
+        line-height: 30px;
+        border-radius: 4px; }
+      #container > div > div > button {
+        font-size: 14px;
+        width: 75px;
+        padding: 5px;
+        margin: 0 10px 0 10px;
+        cursor: pointer;
+        border: 1px solid transparent;
+        border-radius: 4px; }
+      #container > div > div > .btn-info {
+        color: #fff;
+        background-color: #337ab7;
+        border-color: #2e6da4; }
+      #container > div > div > .btn-info:hover {
+        background-color: #2e6da4; }
+
+/*# sourceMappingURL=main.css.map */
