@@ -58,12 +58,12 @@ aside {
       font-size: 30px;
       text-align: center;
       margin: 10px 0; }
-    #container > div > form {
+    #container > div > div {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       width: 294px; }
-      #container > div > form > input {
+      #container > div > div > input {
         width: 350px;
         height: 30px;
         padding: 3px 5px;
@@ -72,9 +72,9 @@ aside {
         margin-bottom: 15px;
         font-family: "Raleway", sans-serif;
         border-radius: 4px; }
-      #container > div > form > input:focus {
+      #container > div > div > input:focus {
         outline: none; }
-      #container > div > form > textarea {
+      #container > div > div > textarea {
         width: 350px;
         padding: 3px 5px;
         border: none;
@@ -85,18 +85,18 @@ aside {
         font-family: "Raleway", sans-serif;
         line-height: 30px;
         border-radius: 4px; }
-      #container > div > form > button {
+      #container > div > div > button {
         font-size: 14px;
         width: 300px;
         padding: 5px;
         cursor: pointer;
         border: 1px solid transparent;
         border-radius: 4px; }
-      #container > div > form > .btn-info {
+      #container > div > div > .btn-info {
         color: #fff;
         background-color: #337ab7;
         border-color: #2e6da4; }
-      #container > div > form > .btn-info:hover {
+      #container > div > div > .btn-info:hover {
         background-color: #2e6da4; }
 
 /*# sourceMappingURL=main.css.map */

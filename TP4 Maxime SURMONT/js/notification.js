@@ -2,17 +2,20 @@ var notifications = [];
 
 export function getElement(){
     notifications = [];
+    printNotifications();
 
-    fetch('https://glo3102lab4.herokuapp.com/fee958c0-c320-40d0-a750-218f2d7c1303/tasks').then(function(response){
-        response.json().then(function(data) {
+    fetch('https://glo3102lab4.herokuapp.com/fee958c0-c320-40d0-a750-218f2d7c1303/tasks', {
+        method: 'GET',
+    }).then(res => res.json())
+        .catch(error => {
+            console.error('Error:', error);
+        })
+        .then(data => {
             for (let task of data.tasks){
                 notifications.push(createNotification(task));
                 printNotifications();
             }
         });
-    }).catch(function(error) {
-        console.log('Fetch Error:', error);
-    });
 }getElement();
 
 export function addElement(){
@@ -43,7 +46,7 @@ export function addElement(){
 function removeElement(task){
     fetch('https://glo3102lab4.herokuapp.com/fee958c0-c320-40d0-a750-218f2d7c1303/tasks/'+task.id, {
         method: 'DELETE',
-    }).then(res => res.json)
+    })
         .catch(error => {
             console.error('Error:', error);
         })
