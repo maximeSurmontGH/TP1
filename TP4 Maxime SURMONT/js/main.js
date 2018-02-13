@@ -1,3 +1,4 @@
-import {createNotification} from './notification.js';
+import {getElement, addElement} from './notification.js';
 
-window.createNotification = createNotification;
+window.getElement = getElement;
+window.addElement = addElement;

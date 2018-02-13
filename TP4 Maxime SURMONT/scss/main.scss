@@ -26,10 +26,12 @@ aside{
     position: relative;
     color: #FFF;
     background-color: #337ab7;
+    min-height: 30px;
 
-    >span{
+    >span:nth-child(3){
       display: block;
       word-break: break-all;
+      width: 130px;
     }
 
     .deleteIcon{
@@ -75,12 +77,11 @@ aside{
       margin: 10px 0;
     }
 
-    >div{
+    >form{
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       width: 294px;
-      margin-bottom: 10px;
 
       >input{
         width: $container-width;
@@ -112,9 +113,8 @@ aside{
 
       >button{
         font-size: 14px;
-        width: 75px;
+        width: 300px;
         padding: 5px;
-        margin: 0 10px 0 10px;
         cursor: pointer;
         border: 1px solid transparent;
         border-radius: 4px;

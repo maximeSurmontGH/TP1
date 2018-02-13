@@ -18,11 +18,10 @@
     <section id="container">
         <div>
             <p><strong>TO DO LIST!</strong></p>
-            <div>
-                <input type="text" placeholder="Your title" id="title">
-                <textarea placeholder="Your message" id="message"></textarea>
-                <button type="button" onclick="createNotification()" class="btn-info">ADD IT</button>
-            </div>
+            <form>
+                <textarea placeholder="Your task" id="task"></textarea>
+                <button type="submit" onclick="addElement()" class="btn-info">ADD IT</button>
+            </form>
         </div>
     </section>
 </body>

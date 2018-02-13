@@ -19,10 +19,12 @@ aside {
     border-radius: 4px;
     position: relative;
     color: #FFF;
-    background-color: #337ab7; }
-    aside > div > span {
+    background-color: #337ab7;
+    min-height: 30px; }
+    aside > div > span:nth-child(3) {
       display: block;
-      word-break: break-all; }
+      word-break: break-all;
+      width: 130px; }
     aside > div .deleteIcon {
       font-size: 30px;
       position: absolute;
@@ -56,13 +58,12 @@ aside {
       font-size: 30px;
       text-align: center;
       margin: 10px 0; }
-    #container > div > div {
+    #container > div > form {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      width: 294px;
-      margin-bottom: 10px; }
-      #container > div > div > input {
+      width: 294px; }
+      #container > div > form > input {
         width: 350px;
         height: 30px;
         padding: 3px 5px;
@@ -71,9 +72,9 @@ aside {
         margin-bottom: 15px;
         font-family: "Raleway", sans-serif;
         border-radius: 4px; }
-      #container > div > div > input:focus {
+      #container > div > form > input:focus {
         outline: none; }
-      #container > div > div > textarea {
+      #container > div > form > textarea {
         width: 350px;
         padding: 3px 5px;
         border: none;
@@ -84,19 +85,18 @@ aside {
         font-family: "Raleway", sans-serif;
         line-height: 30px;
         border-radius: 4px; }
-      #container > div > div > button {
+      #container > div > form > button {
         font-size: 14px;
-        width: 75px;
+        width: 300px;
         padding: 5px;
-        margin: 0 10px 0 10px;
         cursor: pointer;
         border: 1px solid transparent;
         border-radius: 4px; }
-      #container > div > div > .btn-info {
+      #container > div > form > .btn-info {
         color: #fff;
         background-color: #337ab7;
         border-color: #2e6da4; }
-      #container > div > div > .btn-info:hover {
+      #container > div > form > .btn-info:hover {
         background-color: #2e6da4; }
 
 /*# sourceMappingURL=main.css.map */
