@@ -1,14 +1,33 @@
 var notifications = [];
 
-export function getElement(){
+var key = prompt("Enter your user key or click on 'Cancel' to create a new user", "7e996803-54b8-4f78-a377-5775a9371143");
+
+if(key == null || key == "") {
+    fetch('https://glo3102lab4.herokuapp.com/users', {
+        method: 'POST',
+    }).then(res => res.json())
+        .catch(error => {
+            console.error('Error:', error)
+        })
+        .then(response => {
+            key = response.id;
+            alert("Your new user  key: " + response.id);
+            getElement();
+        });
+}else{
+    getElement();
+}
+
+function getElement(){
     notifications = [];
     printNotifications();
 
-    fetch('https://glo3102lab4.herokuapp.com/fee958c0-c320-40d0-a750-218f2d7c1303/tasks', {
+    fetch('https://glo3102lab4.herokuapp.com/'+key+'/tasks', {
         method: 'GET',
     }).then(res => res.json())
         .catch(error => {
             console.error('Error:', error);
+            alert("Your user key is certainly not valid");
         })
         .then(data => {
             for (let task of data.tasks){
@@ -16,7 +35,7 @@ export function getElement(){
                 printNotifications();
             }
         });
-}getElement();
+}
 
 export function addElement(){
     if( document.getElementById('task').value == ''){
@@ -26,7 +45,7 @@ export function addElement(){
         task.name = document.getElementById('task').value;
         document.getElementById('task').value = '';
 
-        fetch('https://glo3102lab4.herokuapp.com/fee958c0-c320-40d0-a750-218f2d7c1303/tasks', {
+        fetch('https://glo3102lab4.herokuapp.com/'+key+'/tasks', {
             method: 'POST',
             body: JSON.stringify(task),
             headers: new Headers({
@@ -34,7 +53,7 @@ export function addElement(){
             })
         }).then(res => res.json())
             .catch(error => {
-                console.error('Error:', error)
+                console.error('Error:', error);
             })
             .then(response => {
                 notifications.push(createNotification(response));
@@ -44,7 +63,7 @@ export function addElement(){
 }
 
 function removeElement(task){
-    fetch('https://glo3102lab4.herokuapp.com/fee958c0-c320-40d0-a750-218f2d7c1303/tasks/'+task.id, {
+    fetch('https://glo3102lab4.herokuapp.com/'+key+'/tasks/'+task.id, {
         method: 'DELETE',
     })
         .catch(error => {
@@ -56,10 +75,15 @@ function removeElement(task){
 }
 
 function changeElement(task){
-    task.name = window.prompt("Update the task", task.name);
+    var name = window.prompt("Update the task", task.name);
+
+    if(name != null && name != "") {
+        task.name = name;
+    }
+
 
     if(task.name != ''){
-        fetch('https://glo3102lab4.herokuapp.com/fee958c0-c320-40d0-a750-218f2d7c1303/tasks/'+task.id, {
+        fetch('https://glo3102lab4.herokuapp.com/'+key+'/tasks/'+task.id, {
             method: 'PUT',
             body: JSON.stringify(task),
             headers: new Headers({
