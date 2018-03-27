@@ -21,9 +21,12 @@ app.get('/', function(req, res){
 	res.sendFile(__dirname + '/index.html');
 });
 
+// web socket connection
 io.on('connection', function(socket){
-	console.log("hello");
+	console.log("connected");
 	socket.on('chat message', function(msg){
+		console.log("work");
+		console.log(msg);
 		io.emit('chat message', msg);
 	});
 });
