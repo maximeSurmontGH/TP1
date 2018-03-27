@@ -1,0 +1,113 @@
+body {
+  padding: 0;
+  margin: 0;
+  height: 99vh;
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  display: flex;
+}
+
+#logger {
+  margin: auto;
+  width: 200px;
+  height: fit-content;
+	border-radius: 10px;
+	padding: 5px 10px;
+	background-color: rgba(66, 66, 99, .3);
+}
+
+#logger p{
+	text-align: center;
+	font-weight: bold;
+	font: 22px "Lucida Grande", Helvetica, Arial, sans-serif;
+	color: #555555;
+	margin: 5px;
+}
+
+#logger p:nth-child(2){
+	color: red;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+#logger input{
+	width: 182px;
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	padding: 3px 6px;
+	margin-bottom: 5px;
+}
+
+#logger input[type="submit"]{
+	width: 198px;
+	padding: 5px;
+	border: solid 1px #CCC;
+	border-radius: 5px;
+	color: #555555;
+}
+
+/* -- -- */
+
+#chat{
+	width: 99vw;
+	position: relative;
+}
+
+#chat>div:nth-child(1){
+	height: 93vh;
+}
+
+#chat>div:nth-child(1)>div{
+	padding: 40px 10px 10px 10px;
+}
+
+.message{
+	background-color: #F9F6F9;
+	padding: 5px 10px;
+	margin-bottom: 5px;
+}
+
+.message span{
+	word-break: break-all;
+	padding-left: 3px;
+}
+
+.them{
+	border-left: 3px #003f5c solid;
+}
+
+.me{
+	border-left: 3px #ffa600 solid;
+}
+
+#chat>div:nth-child(2){
+	height: 5vh;
+	width: 100vw;
+}
+
+#chat input[type="text"]{
+	margin-left: 10px;
+	display: inline-block;
+	height: 5vh;
+	width: 97.5vw;
+	padding: 0;
+}
+
+#chat>div:nth-child(2) span{
+	color: #ffa600;
+	cursor: pointer;
+	font-size: 4.5vh;
+	position: absolute;
+	right: 20px;
+}
+
+#chat input[type="button"]{
+	width: 100px;
+	padding: 5px;
+	border: solid 1px #CCC;
+	border-radius: 5px;
+	color: #555555;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+}
+

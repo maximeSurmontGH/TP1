@@ -1,0 +1,13 @@
+Maxime SURMONT
+MASUR12
+111 224 870
+
+nom install
+npm start
+
+https://localhost:8443/
+https://localhost:8443/userProfile
+
+Utilisation d’un certificat auto signé pour https.
+
+J’ai créer un post sur /users pour créer un users (body: {login:’’, password:’’}) mais je ne l’ai pas implémenté car je ne voyais pas à quoi il servait dans mon approche du TP (je ne pense pas qu’il fallait ajouter un formulaire de création d’user). Les users dispo sont dans /data.js (il y en a un donné dans les placeholder des inputs).

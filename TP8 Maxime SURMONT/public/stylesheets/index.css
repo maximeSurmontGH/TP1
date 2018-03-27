@@ -1,0 +1,46 @@
+body {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+div {
+  margin: auto;
+  width: 200px;
+  height: fit-content;
+	border-radius: 10px;
+	padding: 5px 10px;
+	background-color: rgba(66, 66, 99, .3);
+}
+
+p{
+	text-align: center;
+	font-weight: bold;
+	font: 22px "Lucida Grande", Helvetica, Arial, sans-serif;
+	color: #555555;
+	margin: 5px;
+}
+
+p:nth-child(2){
+	color: red;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+input{
+	width: 182px;
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	padding: 3px 6px;
+	margin-bottom: 5px;
+}
+
+input[type="submit"]{
+	width: 198px;
+	padding: 5px;
+	border: solid 1px #CCC;
+	border-radius: 5px;
+	color: #555555;
+}
+

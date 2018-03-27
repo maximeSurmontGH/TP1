@@ -1,4 +1,4 @@
-var notifications = [];
+ var notifications = [];
 
 var key = prompt("Enter your user key or click on 'Cancel' to create a new user", "7e996803-54b8-4f78-a377-5775a9371143");
 
